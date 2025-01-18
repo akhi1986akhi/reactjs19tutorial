@@ -1,0 +1,29 @@
+.header{
+    font-size: 50px;
+    color: red;
+    font-weight: 600;
+    padding: 100px;
+    background: blueviolet;
+    border: solid orange 5px;
+}
+
+.menuBar{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    list-style: none;
+    padding-right: 30px;
+
+}
+
+.nav{
+    display: flex;
+    gap:20px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
