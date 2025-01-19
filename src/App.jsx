@@ -13,6 +13,8 @@ import Profile from "./pages/dashobard/Profile";
 import Settings from "./pages/dashobard/Settings";
 import Contact from "./pages/contact/Contact";
 import Login from "./pages/login/Login";
+import Notfound from "./pages/notfound/Notfound";
+
 
 
 
@@ -33,6 +35,8 @@ function App() {
         </Route>
 
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Notfound />} />
+
       </Routes>
     </Router>
   )
