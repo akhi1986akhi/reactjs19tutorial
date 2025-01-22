@@ -1,0 +1,13 @@
+.customBtn{
+    outline: none;
+    border: solid 1px transparent;
+    background: rgb(64, 107, 186);
+    padding: 6px 20px;
+    margin-right: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+.customBtn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}

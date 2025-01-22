@@ -14,31 +14,34 @@ import Settings from "./pages/dashobard/Settings";
 import Contact from "./pages/contact/Contact";
 import Login from "./pages/login/Login";
 import Notfound from "./pages/notfound/Notfound";
+import {AppProvider} from "./context/AppContext";
 
 
 
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/service/:id" element={<ServiceDetails />} />
-        
-        <Route path="/dashboard/*" element={<Dashboard />} >
-          <Route path="profile" element={<Profile />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
+    <AppProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/service/:id" element={<ServiceDetails />} />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<Notfound />} />
+          <Route path="/dashboard/*" element={<Dashboard />} >
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
 
-      </Routes>
-    </Router>
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Notfound />} />
+
+        </Routes>
+      </Router>
+    </AppProvider>
   )
 }
 
